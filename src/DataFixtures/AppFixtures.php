@@ -9,7 +9,7 @@ use App\Entity\Doctor;
 
 class AppFixtures extends Fixture
 {
-    public function load(ObjectManager $manager): void
+    public function load(ObjectManager $manager): void 
     {
         $faker = Factory::create('fr_FR');
 
@@ -22,7 +22,7 @@ class AppFixtures extends Fixture
             $doctor->setCity($faker->city());
             $doctor->setZip($faker->postcode());
             $doctor->setPhone($faker->phoneNumber());
-            $doctor->setImage('https://avatar.iran.liara.run/public/'.$i);
+            $doctor->setImage('https://avatar.iran.liara.run/public/'.$i); // Ajout de l'URL de l'image 
 
             $manager->persist($doctor);
         }
